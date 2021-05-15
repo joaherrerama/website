@@ -74,7 +74,7 @@ export default function ProfilePage(props) {
                     <h3 className={classes.title}>Jorge A. Herrera M.</h3>
                     <h6>Geospatial Software Developer</h6>
                     <Button
-                      href="/src/assets/cv/CV_Jorge_Herrera.pdf"
+                      href="https://github.com/joaherrerama/website/raw/master/src/assets/cv/CV_Jorge_Herrera.pdf"
                       color="info"
                       target="_blank"
                       className={classes.navLink}
