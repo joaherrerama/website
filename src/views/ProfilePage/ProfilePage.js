@@ -35,7 +35,7 @@ import study2 from "assets/img/examples/11.jpg";
 import study3 from "assets/img/examples/12.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-
+import {Description} from "@material-ui/icons";
 const useStyles = makeStyles(styles);
 
 export default function ProfilePage(props) {
@@ -73,14 +73,14 @@ export default function ProfilePage(props) {
                   <div className={classes.name}>
                     <h3 className={classes.title}>Jorge A. Herrera M.</h3>
                     <h6>Geospatial Software Developer</h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-linkedin"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-github"} />
+                    <Button
+                      href="/src/assets/cv/CV_Jorge_Herrera.pdf"
+                      color="info"
+                      target="_blank"
+                      className={classes.navLink}
+                      download
+                    >
+                      <Description className={classes.icons} /> CV/Resume
                     </Button>
                   </div>
                 </div>
