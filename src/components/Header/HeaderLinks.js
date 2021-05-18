@@ -28,31 +28,11 @@ export default function HeaderLinks(props) {
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
         <Button
-          to="/landing-page"
+          href="/landing-page"
           color="transparent"
           className={classes.navLink}
         >
           <Person className={classes.icons} /> About me / Experience
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href=""
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <Map className={classes.icons} /> Demo Map
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href=""
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <Dashboard className={classes.icons} /> Demo Dashboard
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
