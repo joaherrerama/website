@@ -1,7 +1,7 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import classNames from "classnames";
 // @material-ui/icons
 import Chat from "@material-ui/icons/Chat";
 import VerifiedUser from "@material-ui/icons/VerifiedUser";
@@ -14,6 +14,20 @@ import NavPills from "components/NavPills/NavPills.js";
 import Dashboard from "@material-ui/icons/Dashboard";
 import Schedule from "@material-ui/icons/Schedule";
 
+import aws from "assets/tech/aws.png"
+import gcp from "assets/tech/gcp.png"
+
+import framework from "assets/tech/framework.png"
+import prog from "assets/tech/programming.png"
+import devops from "assets/tech/devops.png"
+
+import progis from "assets/tech/progis.png"
+import lib from "assets/tech/lib.png"
+
+import desktop from "assets/tech/desktop.png"
+import cloudbased from "assets/tech/cloudbased.png"
+
+
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 import { Android, Assessment, Autorenew, BarChart, Book, Cloud, Code, Computer, LibraryBooks, Person, TouchApp } from "@material-ui/icons";
 
@@ -21,6 +35,7 @@ const useStyles = makeStyles(styles);
 
 export default function SkillSection() {
   const classes = useStyles();
+  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
@@ -45,31 +60,102 @@ export default function SkillSection() {
                     tabButton: "Cloud",
                     tabIcon: Cloud,
                     tabContent: (
-                      <span></span>
+                      <GridContainer>
+                        <GridItem xs={12} sm={2} md={6} className={classes.marginLeft}>
+                        <img
+                            alt="..."
+                            src={aws}
+                            height="100px"
+                            className={
+                              classes.imgRaised +
+                              " " +
+                              classes.imgRounded +
+                              " " +
+                              classes.imgFluid
+                            }
+                        />
+                        </GridItem>
+                        <GridItem xs={12} sm={2} md={6} className={classes.marginLeft}>
+                        <img
+                            alt="..."
+                            src={gcp}
+                            height="100px"
+                            className={
+                              classes.imgRaised +
+                              " " +
+                              classes.imgRounded +
+                              " " +
+                              classes.imgFluid
+                            }
+                        />
+                        </GridItem>
+                      </GridContainer>
                     )
                   },
                   {
                     tabButton: "Frameworks",
                     tabIcon: Dashboard,
                     tabContent: (
-                      <span>
-                      </span>
+                      <GridContainer>
+                      <GridItem xs={12} sm={12} md={12} className={classes.marginLeft}>
+                      <img
+                          alt="..."
+                          src={framework}
+                          height="400px"
+                          className={
+                            classes.imgRaised +
+                            " " +
+                            classes.imgRounded +
+                            " " +
+                            classes.imgFluid
+                          }
+                      />
+                      </GridItem>
+                      </GridContainer>
                     )
                   },
                   {
                     tabButton: "Programming Lenguages",
                     tabIcon: Code,
                     tabContent: (
-                      <span>
-                      </span>
+                      <GridContainer>
+                      <GridItem xs={12} sm={12} md={12} className={classes.marginLeft}>
+                      <img
+                          alt="..."
+                          src={prog}
+                          height="400px"
+                          className={
+                            classes.imgRaised +
+                            " " +
+                            classes.imgRounded +
+                            " " +
+                            classes.imgFluid
+                          }
+                      />
+                      </GridItem>
+                      </GridContainer>
                     )
                   },
                   {
                     tabButton: "DevOps and DB",
                     tabIcon: Autorenew,
                     tabContent: (
-                      <span>
-                      </span>
+                      <GridContainer>
+                      <GridItem xs={12} sm={12} md={12} className={classes.marginLeft}>
+                      <img
+                          alt="..."
+                          src={devops}
+                          height="400px"
+                          className={
+                            classes.imgRaised +
+                            " " +
+                            classes.imgRounded +
+                            " " +
+                            classes.imgFluid
+                          }
+                      />
+                      </GridItem>
+                      </GridContainer>
                     )
                   }
                 ]}
@@ -90,16 +176,44 @@ export default function SkillSection() {
                     tabButton: "Programming Lenguages",
                     tabIcon: Code,
                     tabContent: (
-                      <span>
-                      </span>
+                      <GridContainer>
+                      <GridItem xs={12} sm={12} md={12} className={classes.marginLeft}>
+                      <img
+                          alt="..."
+                          src={progis}
+                          height="400px"
+                          className={
+                            classes.imgRaised +
+                            " " +
+                            classes.imgRounded +
+                            " " +
+                            classes.imgFluid
+                          }
+                      />
+                      </GridItem>
+                      </GridContainer>
                     )
                   },
                   {
                     tabButton: "Libraries",
                     tabIcon: LibraryBooks,
                     tabContent: (
-                      <span>
-                      </span>
+                      <GridContainer>
+                      <GridItem xs={12} sm={12} md={12} className={classes.marginLeft}>
+                      <img
+                          alt="..."
+                          src={lib}
+                          height="400px"
+                          className={
+                            classes.imgRaised +
+                            " " +
+                            classes.imgRounded +
+                            " " +
+                            classes.imgFluid
+                          }
+                      />
+                      </GridItem>
+                      </GridContainer>
                     )
                   },
                 ]}
@@ -120,16 +234,44 @@ export default function SkillSection() {
                     tabButton: "Desktop Softwares",
                     tabIcon: Computer,
                     tabContent: (
-                      <span>
-                      </span>
+                      <GridContainer>
+                      <GridItem xs={12} sm={12} md={12} className={classes.marginLeft}>
+                      <img
+                          alt="..."
+                          src={desktop}
+                          height="400px"
+                          className={
+                            classes.imgRaised +
+                            " " +
+                            classes.imgRounded +
+                            " " +
+                            classes.imgFluid
+                          }
+                      />
+                      </GridItem>
+                      </GridContainer>
                     )
                   },
                   {
                     tabButton: "Cloud-Based Technologies",
                     tabIcon: TouchApp,
                     tabContent: (
-                      <span>
-                      </span>
+                      <GridContainer>
+                      <GridItem xs={12} sm={12} md={12} className={classes.marginLeft}>
+                      <img
+                          alt="..."
+                          src={cloudbased}
+                          height="400px"
+                          className={
+                            classes.imgRaised +
+                            " " +
+                            classes.imgRounded +
+                            " " +
+                            classes.imgFluid
+                          }
+                      />
+                      </GridItem>
+                      </GridContainer>
                     )
                   },
                 ]}

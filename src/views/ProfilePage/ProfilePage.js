@@ -16,6 +16,7 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
+import CustomTabs from "components/CustomTabs/CustomTabs.js";
 
 // Sections for this page
 import SkillSection from "./Sections/Skill.js";
@@ -35,7 +36,7 @@ import study2 from "assets/img/examples/11.jpg";
 import study3 from "assets/img/examples/12.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-import {Description} from "@material-ui/icons";
+import {Description, Photo, Chat} from "@material-ui/icons";
 const useStyles = makeStyles(styles);
 
 export default function ProfilePage(props) {
@@ -55,8 +56,8 @@ export default function ProfilePage(props) {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 200,
-          color: "white"
+          height: 300,
+          color: "info"
         }}
         {...rest}
       />
@@ -74,7 +75,7 @@ export default function ProfilePage(props) {
                     <h3 className={classes.title}>Jorge A. Herrera M.</h3>
                     <h6>Geospatial Software Developer</h6>
                     <Button
-                      href="https://github.com/joaherrerama/website/raw/master/src/assets/cv/CV_Jorge_Herrera.pdf"
+                      href="https://drive.google.com/file/d/1o18ixi7pNZcIRInFdmDTR3bsvmjvW45t/view?usp=sharing"
                       color="info"
                       target="_blank"
                       className={classes.navLink}
@@ -110,32 +111,131 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={6}>
-                            <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
+                            <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={studio1}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Find this project at <a><b>http://app.forliance.com</b></a> 
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
-                            <img
-                              alt="..."
-                              src={studio2}
-                              className={navImageClasses}
+                            <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={studio2}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      please fin this project at <a><b>http://ideamco.com</b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={6}>
-                            <img
-                              alt="..."
-                              src={studio5}
-                              className={navImageClasses}
+                          <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={studio5}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      This is a private project where the technologies convey to create an enviroment for water managment and supplying.
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
-                            <img
-                              alt="..."
-                              src={studio4}
-                              className={navImageClasses}
+                            <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={studio3}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
-                            <img
-                              alt="..."
-                              src={studio3}
-                              className={navImageClasses}
+                            <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={studio4}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Please find more information at <a><b>https://www.naxsolutions.com/</b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
                           </GridItem>
                         </GridContainer>
@@ -147,33 +247,133 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={6}>
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
+                          <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={work1}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Please find more information at <a><b>https://fcds.org.co/</b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
+                            <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={work2}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Please find more information at <a><b>https://fcds.org.co/</b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
-                            <img
-                              alt="..."
-                              src={work3}
-                              className={navImageClasses}
+                            <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={work3}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Please find more information at <a><b></b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={6}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
+                          <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={work4}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Please find more information at <a><b>https://forliance.com/</b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
                             />
-                            <img
-                              alt="..."
-                              src={work5}
-                              className={navImageClasses}
-                            />
+                            <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                    alt="..."
+                                    src={work5}
+                                    className={navImageClasses}
+                                  />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Please find more information at <a><b>https://forliance.com/</b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
+                            />                            
                           </GridItem>
                         </GridContainer>
                       )
@@ -184,23 +384,89 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={6}>
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={study2}
-                              className={navImageClasses}
-                            />
+                          <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={study1}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Please find more information at <a><b>https://github.com/joaherrerama/Tc-and-Lag-Time-QGIS-Plugin</b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
+                            />  
+                            <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={study2}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      The investigation was carried out with very high-resolution images at 2.6 centimetres of spatial resolution, which allowed to map the existing potholes within the study area automatically, decreasing the detection and verification times of the roadway that runs a worker specialized in field, these yields of the process are possible considering the quality of the captured images.
+                                      <p className={classes.textCenter}>                                      
+                                        <b>
+                                          Please find more information at <a><b>https://repository.udistrital.edu.co/handle/11349/25799</b></a>
+                                        </b>
+                                      </p>
+                                    </p>
+                                  )
+                                }
+                              ]}
+                            />  
                           </GridItem>
                           <GridItem xs={12} sm={12} md={6}>
-                            <img
-                              alt="..."
-                              src={study3}
-                              className={navImageClasses}
-                            />
+                          <CustomTabs
+                              headerColor="info"
+                              tabs={[
+                                {
+                                  tabName: "Resume",
+                                  tabIcon: Photo,
+                                  tabContent: (
+                                    <img
+                                      alt="..."
+                                      src={study3}
+                                      className={navImageClasses}
+                                    />
+                                  )
+                                },
+                                {
+                                  tabName: "Description",
+                                  tabIcon: Chat,
+                                  tabContent: (
+                                    <p className={classes.textCenter}>
+                                      Please find more information at <a><b></b></a>
+                                    </p>
+                                  )
+                                }
+                              ]}
+                            /> 
+                            
                           </GridItem>
                         </GridContainer>
                       )

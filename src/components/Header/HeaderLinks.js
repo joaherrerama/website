@@ -28,7 +28,14 @@ export default function HeaderLinks(props) {
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
         <Button
-          href="/landing-page"
+          href="/"
+          color="transparent"
+          className={classes.navLink}
+        >
+          <Apps className={classes.icons} /> Main Page
+        </Button>
+        <Button
+          href="/about"
           color="transparent"
           className={classes.navLink}
         >
