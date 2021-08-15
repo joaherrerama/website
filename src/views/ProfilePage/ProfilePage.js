@@ -136,6 +136,7 @@ export default function ProfilePage(props) {
                                 }
                               ]}
                             />
+                            <br></br>
                             <CustomTabs
                               headerColor="info"
                               tabs={[
@@ -182,12 +183,13 @@ export default function ProfilePage(props) {
                                   tabIcon: Chat,
                                   tabContent: (
                                     <p className={classes.textCenter}>
-                                      This is a private project where the technologies convey to create an enviroment for water managment and supplying.
+                                      This is a private project where the technologies convey to create an environment for water management and supplying.
                                     </p>
                                   )
                                 }
                               ]}
                             />
+                            <br></br>
                             <CustomTabs
                               headerColor="info"
                               tabs={[
@@ -207,11 +209,13 @@ export default function ProfilePage(props) {
                                   tabIcon: Chat,
                                   tabContent: (
                                     <p className={classes.textCenter}>
+                                      In this project, I was in charge of the development of the mobile app. The application was created based on web technology and its aim was to collect pictures, coordinates and data for each property in the municipality of Chia, Cundinamarca, Colombia
                                     </p>
                                   )
                                 }
                               ]}
                             />
+                            <br></br>
                             <CustomTabs
                               headerColor="info"
                               tabs={[
@@ -230,9 +234,14 @@ export default function ProfilePage(props) {
                                   tabName: "Description",
                                   tabIcon: Chat,
                                   tabContent: (
-                                    <p className={classes.textCenter}>
-                                      Please find more information at <a><b>https://www.naxsolutions.com/</b></a>
-                                    </p>
+                                    <div>
+                                      <p className={classes.textCenter}>
+                                        (Freelance) The task assiged was the creation of a function for raster cropping using a WPS service. The user select the parcel to visualize and the program should crop and zoom to the parcel selected
+                                      </p>
+                                      <p className={classes.textCenter}>
+                                        Please find more information at <a><b>https://www.naxsolutions.com/</b></a>
+                                      </p>
+                                    </div>
                                   )
                                 }
                               ]}
@@ -272,6 +281,7 @@ export default function ProfilePage(props) {
                                 }
                               ]}
                             />
+                            <br></br>
                             <CustomTabs
                               headerColor="info"
                               tabs={[
@@ -297,6 +307,7 @@ export default function ProfilePage(props) {
                                 }
                               ]}
                             />
+                            <br></br>
                             <CustomTabs
                               headerColor="info"
                               tabs={[
@@ -349,6 +360,7 @@ export default function ProfilePage(props) {
                                 }
                               ]}
                             />
+                            <br></br>
                             <CustomTabs
                               headerColor="info"
                               tabs={[
@@ -409,6 +421,7 @@ export default function ProfilePage(props) {
                                 }
                               ]}
                             />  
+                            <br></br>
                             <CustomTabs
                               headerColor="info"
                               tabs={[
